@@ -1,0 +1,35 @@
+# Book : A Primer Of Ecology or R 
+
+#Um livro que Fornece uma introdução ao uso de R para modelar populações e suas interações
+
+
+#população do Recife ao logo dos últimos 10 anos de acordo com a PNAD
+#2012 a 2022
+
+N <- c( 1537704,
+        1550786,
+        1564152,
+        1599513,
+        1608488,
+        1617183,
+        1625583,
+        1633697,
+        1637834,
+        1645727,
+        1653097,
+        1654849)
+
+anos <- 2010:2021
+
+plot(x = anos, y = N)
+
+#calculamos a razão em relação ao ano anterior
+
+N[2] / N[1] #vemos então que a população de Recife tendeu a vaiar de um ano ao outro numa razão
+# de 1.008507
+
+
+ variacao_ano_ano <- N[2:12] / N[1:11]
+
+ #Aplicaremos essa mesma variação aos próximos 10 anos para encontrar os valores das estimativas populacionais
+ 
